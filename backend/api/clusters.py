@@ -4,6 +4,13 @@ from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 from pathlib import Path
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
+from pathlib import Path
+
+# Load .env for local development
+env_path = Path(__file__).resolve().parent.parent / ".env"
+if env_path.exists():
+    load_dotenv(env_path)
 
 app = FastAPI()
 

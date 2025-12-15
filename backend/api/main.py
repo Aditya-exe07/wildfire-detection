@@ -5,7 +5,14 @@ from typing import List, Optional
 import joblib
 import numpy as np
 import pandas as pd
+from dotenv import load_dotenv
+from pathlib import Path
 
+# Load .env for local development
+env_path = Path(__file__).resolve().parent.parent / ".env"
+if env_path.exists():
+    load_dotenv(env_path)
+    
 # Load model and scaler
 model = joblib.load("models/rf_fire_model.joblib")
 scaler = joblib.load("models/scaler_rf.joblib")
