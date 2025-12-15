@@ -18,6 +18,14 @@ import numpy as np
 from sklearn.cluster import DBSCAN
 import math
 
+from dotenv import load_dotenv
+from pathlib import Path
+
+# Load .env for local development
+env_path = Path(__file__).resolve().parent.parent / ".env"
+if env_path.exists():
+    load_dotenv(env_path)
+
 # CONFIG - set these environment variables OR edit here
 FIRMS_CSV_URL = os.getenv("FIRMS_CSV_URL")  # e.g. "https://firms.modaps.eosdis.nasa.gov/..."
 OUTPUT_DIR = Path("data")
