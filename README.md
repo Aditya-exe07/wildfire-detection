@@ -1,5 +1,4 @@
 # WildGuard – AI Wildfire Detection System
-# WildGuard 🔥  
 ### AI-Powered Real-Time Wildfire Detection & Alerting System
 
 WildGuard is an end-to-end machine learning system that detects, clusters, and monitors wildfires in near real-time using satellite imagery from **NASA FIRMS (VIIRS)**.  
